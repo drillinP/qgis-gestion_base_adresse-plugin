@@ -611,45 +611,25 @@
                 
                 <h1 id="gestion-dune-base-adresse-avec-qgis-et-lizmap">Gestion d'une base adresse avec QGIS et Lizmap<a class="headerlink" href="#gestion-dune-base-adresse-avec-qgis-et-lizmap" title="Permanent link">#</a></h1>
 <h2 id="diagramme">Diagramme<a class="headerlink" href="#diagramme" title="Permanent link">#</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>graph TD
+<p><div class="mermaid">graph TD
 Database_Structure[Create database structure]
 Load_Layers[Load database layers]
 Load_Styles[Load layers styles]
 Config_Project[Configure project]
 
-Lizmap_edit[Editing data in Lizmap]
-Export_doc[Export documentation from Lizmap]
-
-subgraph Lizmap
-Lizmap_edit
-Export_doc
-end
-
 subgraph QGIS
 Database_Structure --&gt; Load_Layers
 Load_Layers --&gt; Load_Styles
 Load_Layers --&gt; Config_Project
-end
-</code></pre></div>
-</td></tr></table>
+end</div>
+<div class="mermaid">graph TD
+Lizmap_edit[Editing data in Lizmap]
+Export_doc[Export document from Lizmap]
+
+subgraph Lizmap
+Lizmap_edit
+Export_doc
+end</div></p>
 <p><img alt="Logo" src="media/icon.png" /></p>
 <p>Démo du module web sur <a href="https://demo.lizmap.com/adresse/index.php/view/map/?repository=demo&amp;project=adresse">demo.lizmap.com</a></p>
 <p><img alt="Démo Lizmap" src="media/demo_qgis.png" /></p>
@@ -763,6 +743,8 @@ end
       <script src="assets/javascripts/bundle.7353b375.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
       
     
   </body>
